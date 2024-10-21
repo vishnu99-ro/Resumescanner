@@ -3,39 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapido-like Ride Booking</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ride Booking</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Ride Booking</h1>
+        <h1>Book a Ride</h1>
         <form id="booking-form">
-            <div class="input-group">
-                <label for="pickup">Pickup Location:</label>
-                <input type="text" id="pickup" placeholder="Enter pickup location" required>
-            </div>
+            <label for="pickup">Pickup Location:</label>
+            <input type="text" id="pickup" placeholder="Enter pickup location" required>
+            <button type="button" id="get-location">Use Current Location</button>
 
-            <div class="input-group">
-                <label for="dropoff">Drop-off Location:</label>
-                <input type="text" id="dropoff" placeholder="Enter drop-off location" required>
-            </div>
+            <label for="dropoff">Drop-off Location:</label>
+            <input type="text" id="dropoff" placeholder="Enter drop-off location" required>
 
-            <div class="input-group">
-                <label for="ride-type">Select Ride:</label>
-                <select id="ride-type">
-                    <option value="bike">Bike Taxi</option>
-                    <option value="auto">Auto-Rickshaw</option>
-                </select>
-            </div>
+            <label for="ride-type">Ride Type:</label>
+            <select id="ride-type">
+                <option value="bike">Bike Taxi</option>
+                <option value="auto">Auto-Rickshaw</option>
+            </select>
 
-            <div class="fare-estimate">
-                <h2>Fare Estimate: <span id="fare">₹0</span></h2>
-            </div>
-
-            <button type="submit" id="book-ride">Book Ride</button>
+            <button type="submit">Book Ride</button>
         </form>
 
-        <div id="booking-result" class="result"></div>
+        <div id="booking-result"></div>
+        <h2>Fare Estimate: <span id="fare">₹0</span></h2>
     </div>
 
     <script src="script.js"></script>
