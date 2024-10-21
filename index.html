@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Scanner</title>
+    <title>Resume Quality Checker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>AI-Powered Resume Scanner</h1>
-        <form id="resume-form">
-            <label for="resume">Upload Resume (Plain Text):</label>
-            <input type="file" id="resume" accept=".txt" required>
+        <h1>Resume Quality Checker</h1>
+        <form id="resume-form" enctype="multipart/form-data">
+            <label for="resume">Upload Resume (PDF):</label>
+            <input type="file" id="resume" accept=".pdf" required>
             <br><br>
-            <label for="job-keywords">Enter Job Keywords (comma-separated):</label>
-            <textarea id="job-keywords" rows="4" cols="50" placeholder="e.g. Python, Machine Learning, SQL" required></textarea>
-            <br><br>
-            <button type="submit">Scan Resume</button>
+            <button type="submit">Check Quality</button>
         </form>
         <div id="result" class="result"></div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
